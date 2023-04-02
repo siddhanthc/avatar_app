@@ -25,7 +25,7 @@ def get_response(prompt):
 
 # Main function
 if __name__ == '__main__':
-    prompt = "What is best way to get sound sleep"
+    prompt = "Who is Siddhanth Chandrashekar"
 
     # Generate the response from ChatGPT
     response = get_response(prompt)
