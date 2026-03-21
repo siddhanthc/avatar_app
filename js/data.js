@@ -3,6 +3,27 @@ const DEFAULT_ZOOM = 15;
 const DEFAULT_PITCH = 50;
 const DEFAULT_BEARING = -15;
 
+// Malleshwaram neighborhood boundary (approximate)
+// Bounded by: Sankey Tank / Sadashivanagar (N), Sankey Road (NE),
+// Vyalikaval (E), Srirampura / Mantri Square (S), Railway line (W)
+const MALLESHWARAM_BOUNDARY = [
+  [77.5623, 13.0080],  // NW — near 18th Cross / west boundary
+  [77.5630, 13.0100],  // N — northwest of Sankey Tank
+  [77.5680, 13.0115],  // N — north edge near Sankey Tank west shore
+  [77.5730, 13.0110],  // NE — Sankey Tank east shore
+  [77.5770, 13.0095],  // NE — Sankey Road / Sadashivanagar border
+  [77.5785, 13.0070],  // E — Chowdiah Hall area / Vyalikaval
+  [77.5780, 13.0040],  // E — east of temple cluster
+  [77.5770, 13.0010],  // SE — east boundary near Sampige Road south
+  [77.5750, 12.9970],  // S — near Srirampura / Mantri Square
+  [77.5710, 12.9950],  // S — southern tip
+  [77.5660, 12.9950],  // SW — near railway line south
+  [77.5620, 12.9970],  // W — western boundary / railway area
+  [77.5610, 13.0010],  // W — west of Margosa Road
+  [77.5615, 13.0050],  // W — mid-west boundary
+  [77.5623, 13.0080],  // NW — close the polygon
+];
+
 const places = [
   // ── Temples ──────────────────────────────────────────────
   {

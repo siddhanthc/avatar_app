@@ -72,6 +72,42 @@ map.on('load', () => {
     );
   }
 
+  // ── Malleshwaram Boundary ────────────────────────────
+  map.addSource('malleshwaram-boundary', {
+    type: 'geojson',
+    data: {
+      type: 'Feature',
+      geometry: {
+        type: 'Polygon',
+        coordinates: [MALLESHWARAM_BOUNDARY],
+      },
+    },
+  });
+
+  // Translucent fill
+  map.addLayer({
+    id: 'malleshwaram-fill',
+    type: 'fill',
+    source: 'malleshwaram-boundary',
+    paint: {
+      'fill-color': '#e67e22',
+      'fill-opacity': 0.06,
+    },
+  }, labelLayerId);
+
+  // Thick border outline
+  map.addLayer({
+    id: 'malleshwaram-border',
+    type: 'line',
+    source: 'malleshwaram-boundary',
+    paint: {
+      'line-color': '#d35400',
+      'line-width': 4,
+      'line-dasharray': [3, 2],
+      'line-opacity': 0.85,
+    },
+  });
+
   // ── Markers & UI ─────────────────────────────────────
   createMarkers(map);
   renderSidebar(map);
