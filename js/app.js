@@ -18,22 +18,18 @@ map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), 'top-
 map.addControl(new maplibregl.ScaleControl({ maxWidth: 150 }), 'bottom-right');
 
 map.on('load', () => {
-  // ── 3D Buildings ─────────────────────────────────────
-  // OpenFreeMap's bright style includes an 'openmaptiles' source with building data.
-  // We add a fill-extrusion layer to render buildings in 3D.
-
-  const layerExists = map.getLayer('3d-buildings');
-  if (!layerExists) {
-    // Find the first symbol layer to insert buildings beneath labels
-    const layers = map.getStyle().layers;
-    let labelLayerId;
-    for (const layer of layers) {
-      if (layer.type === 'symbol' && layer.layout && layer.layout['text-field']) {
-        labelLayerId = layer.id;
-        break;
-      }
+  // ── Find label layer (insert visual layers beneath labels) ──
+  const layers = map.getStyle().layers;
+  let labelLayerId;
+  for (const layer of layers) {
+    if (layer.type === 'symbol' && layer.layout && layer.layout['text-field']) {
+      labelLayerId = layer.id;
+      break;
     }
+  }
 
+  // ── 3D Buildings ─────────────────────────────────────
+  if (!map.getLayer('3d-buildings')) {
     map.addLayer(
       {
         id: '3d-buildings',
