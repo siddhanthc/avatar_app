@@ -87,7 +87,7 @@ map.on('load', () => {
     source: 'malleshwaram-boundary',
     paint: {
       'fill-color': '#e67e22',
-      'fill-opacity': 0.06,
+      'fill-opacity': 0.08,
     },
   }, labelLayerId);
 
@@ -98,9 +98,9 @@ map.on('load', () => {
     source: 'malleshwaram-boundary',
     paint: {
       'line-color': '#d35400',
-      'line-width': 4,
-      'line-dasharray': [3, 2],
-      'line-opacity': 0.85,
+      'line-width': 5,
+      'line-dasharray': [2, 1],
+      'line-opacity': 0.9,
     },
   });
 

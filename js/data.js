@@ -4,29 +4,33 @@ const DEFAULT_PITCH = 50;
 const DEFAULT_BEARING = -15;
 
 // Malleshwaram neighborhood boundary (traced from Google Maps)
-// N: 80 Feet Rd, NE-E: Sankey Rd (diagonal), S: Mantri Square / MKK Rd,
-// SW: Dr Rajkumar Rd, W: western boundary
+// N: 80 Feet Rd, NE-E: Sankey Rd diagonal, S: Mantri Square,
+// SW: Dr Rajkumar Rd, W: Railway line (tight)
 const MALLESHWARAM_BOUNDARY = [
-  [77.5625, 13.0100],  // NW corner
-  [77.5625, 13.0125],  // N — heading up
-  [77.5660, 13.0135],  // N — along 80 Feet Rd
-  [77.5710, 13.0135],  // N — continuing east along 80 Feet Rd
-  [77.5750, 13.0120],  // NE — turning toward Sankey Rd
-  [77.5775, 13.0095],  // NE — start of Sankey Rd diagonal
-  [77.5800, 13.0065],  // E — along Sankey Rd
-  [77.5820, 13.0035],  // E — continuing SE along Sankey Rd
-  [77.5835, 13.0005],  // E — near eastern tip along Sankey Rd
-  [77.5830, 12.9970],  // SE — turning south past Sankey Rd
-  [77.5800, 12.9940],  // SE — near 2nd Main Rd / Kumarakrupa Rd
-  [77.5770, 12.9920],  // S — heading toward Mantri Square
-  [77.5730, 12.9905],  // S — near Mantri Square Mall
-  [77.5690, 12.9900],  // S — southern edge
-  [77.5650, 12.9910],  // SW — near Dr Rajkumar Rd
-  [77.5620, 12.9940],  // W — western boundary heading north
-  [77.5610, 12.9980],  // W — continuing north
-  [77.5610, 13.0020],  // W — west of Margosa Rd
-  [77.5615, 13.0060],  // W — continuing north
-  [77.5625, 13.0100],  // NW — close the polygon
+  // ── North: along 80 Feet Rd ──
+  [77.5650, 13.0130],  // NW — railway meets 80 Feet Rd
+  [77.5700, 13.0135],  // N — along 80 Feet Rd
+  [77.5740, 13.0125],  // N — continuing east
+  // ── NE–E: diagonal along Sankey Rd ──
+  [77.5770, 13.0100],  // NE — start of Sankey Rd
+  [77.5790, 13.0075],  // E — along Sankey Rd
+  [77.5810, 13.0045],  // E — continuing SE
+  [77.5830, 13.0015],  // E — further along Sankey Rd
+  [77.5835, 12.9985],  // E — eastern tip
+  // ── SE–S: curving south toward Mantri Square ──
+  [77.5820, 12.9955],  // SE — past Sankey Rd
+  [77.5790, 12.9930],  // SE — near Kumarakrupa Rd
+  [77.5750, 12.9910],  // S — heading to Mantri Square
+  [77.5710, 12.9900],  // S — near Mantri Square Mall
+  // ── SW: Dr Rajkumar Rd ──
+  [77.5680, 12.9905],  // SW — southern edge
+  [77.5660, 12.9920],  // SW — Dr Rajkumar Rd area
+  // ── West: along the railway line ──
+  [77.5655, 12.9960],  // W — railway line south
+  [77.5652, 13.0000],  // W — railway line
+  [77.5650, 13.0040],  // W — railway line
+  [77.5650, 13.0080],  // W — railway line
+  [77.5650, 13.0130],  // NW — close polygon at railway / 80 Feet Rd
 ];
 
 const places = [
