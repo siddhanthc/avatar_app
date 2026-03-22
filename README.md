@@ -2,6 +2,8 @@
 
 An interactive 3D map guide to Malleshwaram, one of Bangalore's oldest and most culturally rich neighbourhoods. Explore temples, iconic eateries, and landmarks with detailed descriptions, timings, ratings, and directions.
 
+**[Live Demo](https://siddhanthc.github.io/avatar_app/)**
+
 ## Tech Stack
 
 | Layer | Technology |
