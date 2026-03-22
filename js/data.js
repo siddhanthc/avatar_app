@@ -1,27 +1,32 @@
-const MALLESHWARAM_CENTER = [77.5700, 13.003];
-const DEFAULT_ZOOM = 15;
+const MALLESHWARAM_CENTER = [77.5720, 13.002];
+const DEFAULT_ZOOM = 14.5;
 const DEFAULT_PITCH = 50;
 const DEFAULT_BEARING = -15;
 
-// Malleshwaram neighborhood boundary (approximate)
-// Bounded by: Sankey Tank / Sadashivanagar (N), Sankey Road (NE),
-// Vyalikaval (E), Srirampura / Mantri Square (S), Railway line (W)
+// Malleshwaram neighborhood boundary (traced from Google Maps)
+// N: 80 Feet Rd, NE-E: Sankey Rd (diagonal), S: Mantri Square / MKK Rd,
+// SW: Dr Rajkumar Rd, W: western boundary
 const MALLESHWARAM_BOUNDARY = [
-  [77.5623, 13.0080],  // NW — near 18th Cross / west boundary
-  [77.5630, 13.0100],  // N — northwest of Sankey Tank
-  [77.5680, 13.0115],  // N — north edge near Sankey Tank west shore
-  [77.5730, 13.0110],  // NE — Sankey Tank east shore
-  [77.5770, 13.0095],  // NE — Sankey Road / Sadashivanagar border
-  [77.5785, 13.0070],  // E — Chowdiah Hall area / Vyalikaval
-  [77.5780, 13.0040],  // E — east of temple cluster
-  [77.5770, 13.0010],  // SE — east boundary near Sampige Road south
-  [77.5750, 12.9970],  // S — near Srirampura / Mantri Square
-  [77.5710, 12.9950],  // S — southern tip
-  [77.5660, 12.9950],  // SW — near railway line south
-  [77.5620, 12.9970],  // W — western boundary / railway area
-  [77.5610, 13.0010],  // W — west of Margosa Road
-  [77.5615, 13.0050],  // W — mid-west boundary
-  [77.5623, 13.0080],  // NW — close the polygon
+  [77.5625, 13.0100],  // NW corner
+  [77.5625, 13.0125],  // N — heading up
+  [77.5660, 13.0135],  // N — along 80 Feet Rd
+  [77.5710, 13.0135],  // N — continuing east along 80 Feet Rd
+  [77.5750, 13.0120],  // NE — turning toward Sankey Rd
+  [77.5775, 13.0095],  // NE — start of Sankey Rd diagonal
+  [77.5800, 13.0065],  // E — along Sankey Rd
+  [77.5820, 13.0035],  // E — continuing SE along Sankey Rd
+  [77.5835, 13.0005],  // E — near eastern tip along Sankey Rd
+  [77.5830, 12.9970],  // SE — turning south past Sankey Rd
+  [77.5800, 12.9940],  // SE — near 2nd Main Rd / Kumarakrupa Rd
+  [77.5770, 12.9920],  // S — heading toward Mantri Square
+  [77.5730, 12.9905],  // S — near Mantri Square Mall
+  [77.5690, 12.9900],  // S — southern edge
+  [77.5650, 12.9910],  // SW — near Dr Rajkumar Rd
+  [77.5620, 12.9940],  // W — western boundary heading north
+  [77.5610, 12.9980],  // W — continuing north
+  [77.5610, 13.0020],  // W — west of Margosa Rd
+  [77.5615, 13.0060],  // W — continuing north
+  [77.5625, 13.0100],  // NW — close the polygon
 ];
 
 const places = [
