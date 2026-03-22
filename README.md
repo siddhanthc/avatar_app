@@ -40,9 +40,10 @@ The three ward polygons were merged using [Shapely](https://shapely.readthedocs.
 Each place includes:
 
 - **Coordinates** — verified against OpenStreetMap GPS data
-- **Description** — narrative write-up of history and significance
-- **Timings** — opening hours
-- **Rating** — aggregate star rating (4.2–4.6)
+- **Description** — narrative write-ups sourced from Wikipedia, temple/restaurant websites, and local knowledge
+- **Timings** — opening hours sourced from [Google Maps](https://maps.google.com/)
+- **Rating** — aggregate star ratings from [Google Maps](https://maps.google.com/) reviews (4.2–4.6)
+- **Must-try dishes** — popular recommendations from Google Maps reviews and food blogs
 - **Category-specific fields** — `deity` and `established` (temples), `mustTry` and `priceRange` (eateries), `highlight` (landmarks)
 
 ### Marker Icons
